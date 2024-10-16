@@ -2073,6 +2073,7 @@
         <record model="account.account.template" id="13011">
             <field name="name">Consumable supplies</field>
             <field name="code">13011</field>
+            <field name="type" ref="raw_materials"/>
             <field name="parent" ref="1301"/>
         </record>
         <record model="account.account.template" id="130110">
@@ -2102,6 +2103,7 @@
         <record model="account.account.template" id="13012">
             <field name="name">Packaging materials</field>
             <field name="code">13012</field>
+            <field name="type" ref="raw_materials"/>
             <field name="parent" ref="1301"/>
         </record>
         <record model="account.account.template" id="130120">
@@ -2145,6 +2147,7 @@
         <record model="account.account.template" id="13110">
             <field name="name">Wages—direct production</field>
             <field name="code">13110</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="1311"/>
         </record>
         <record model="account.account.template" id="131100">
@@ -2174,6 +2177,7 @@
         <record model="account.account.template" id="13111">
             <field name="name">Required payroll-related expenses—direct production</field>
             <field name="code">13111</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="1311"/>
         </record>
         <record model="account.account.template" id="131110">
@@ -2203,66 +2207,79 @@
         <record model="account.account.template" id="13112">
             <field name="name">Fringe benefits—direct production</field>
             <field name="code">13112</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="1311"/>
         </record>
         <record model="account.account.template" id="131120">
             <field name="name">Paid leave—direct production</field>
             <field name="code">131120</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="13112"/>
         </record>
         <record model="account.account.template" id="1311200">
             <field name="name">Vacation pay—direct production</field>
             <field name="code">1311200</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="131120"/>
         </record>
         <record model="account.account.template" id="1311201">
             <field name="name">Holiday pay—direct production</field>
             <field name="code">1311201</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="131120"/>
         </record>
         <record model="account.account.template" id="1311202">
             <field name="name">Sick pay—direct production</field>
             <field name="code">1311202</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="131120"/>
         </record>
         <record model="account.account.template" id="1311203">
             <field name="name">Other paid leave—direct production</field>
             <field name="code">1311203</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="131120"/>
         </record>
         <record model="account.account.template" id="131121">
             <field name="name">Group health insurance—direct production</field>
             <field name="code">131121</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="13112"/>
         </record>
         <record model="account.account.template" id="131122">
             <field name="name">Life insurance—direct production</field>
             <field name="code">131122</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="13112"/>
         </record>
         <record model="account.account.template" id="131123">
             <field name="name">Employer 401k contributions—direct production</field>
             <field name="code">131123</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="13112"/>
         </record>
         <record model="account.account.template" id="131124">
             <field name="name">Employer IRA contributions—direct production</field>
             <field name="code">131124</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="13112"/>
         </record>
         <record model="account.account.template" id="131125">
             <field name="name">Pensions and retirement—direct production</field>
             <field name="code">131125</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="13112"/>
         </record>
         <record model="account.account.template" id="131129">
             <field name="name">Other employer-provided benefits—direct production</field>
             <field name="code">131129</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="13112"/>
         </record>
         <record model="account.account.template" id="1311290">
             <field name="name">Education and professional development—direct production</field>
             <field name="code">1311290</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="131129"/>
         </record>
         <record model="account.account.template" id="1311291">
@@ -2280,6 +2297,7 @@
         <record model="account.account.template" id="1311293">
             <field name="name">Food-related benefits—direct production</field>
             <field name="code">1311293</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="131129"/>
         </record>
         <record model="account.account.template" id="13112930">
@@ -2303,6 +2321,7 @@
         <record model="account.account.template" id="1311294">
             <field name="name">Employee achievement awards—direct production</field>
             <field name="code">1311294</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="131129"/>
         </record>
         <record model="account.account.template" id="13112940">
@@ -2320,6 +2339,7 @@
         <record model="account.account.template" id="13113">
             <field name="name">Employee recruitment—direct production</field>
             <field name="code">13113</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="1311"/>
         </record>
         <record model="account.account.template" id="13114">
@@ -2344,11 +2364,13 @@
         <record model="account.account.template" id="13121">
             <field name="name">Indirect labor—allocated overhead</field>
             <field name="code">13121</field>
+            <field name="type" ref="production_overhead"/>
             <field name="parent" ref="1312"/>
         </record>
         <record model="account.account.template" id="13122">
             <field name="name">Overhead allocations of production facilities and equipment</field>
             <field name="code">13122</field>
+            <field name="type" ref="production_overhead"/>
             <field name="parent" ref="1312"/>
         </record>
         <record model="account.account.template" id="131220">
@@ -2372,11 +2394,13 @@
         <record model="account.account.template" id="131223">
             <field name="name">Repairs and maintenance—allocated overhead</field>
             <field name="code">131223</field>
+            <field name="type" ref="production_overhead"/>
             <field name="parent" ref="13122"/>
         </record>
         <record model="account.account.template" id="131224">
             <field name="name">Equipment allocations</field>
             <field name="code">131224</field>
+            <field name="type" ref="production_overhead"/>
             <field name="parent" ref="13122"/>
         </record>
         <record model="account.account.template" id="1312240">
@@ -2394,6 +2418,7 @@
         <record model="account.account.template" id="131225">
             <field name="name">Depreciation and amortization allocations</field>
             <field name="code">131225</field>
+            <field name="type" ref="production_overhead"/>
             <field name="parent" ref="13122"/>
         </record>
         <record model="account.account.template" id="1312250">
@@ -2429,11 +2454,13 @@
         <record model="account.account.template" id="1312259">
             <field name="name">Other depreciation and amortization allocations</field>
             <field name="code">1312259</field>
+            <field name="type" ref="production_overhead"/>
             <field name="parent" ref="131225"/>
         </record>
         <record model="account.account.template" id="131229">
             <field name="name">Other production facilities and equipment allocations</field>
             <field name="code">131229</field>
+            <field name="type" ref="production_overhead"/>
             <field name="parent" ref="13122"/>
         </record>
         <record model="account.account.template" id="1312290">
@@ -2451,11 +2478,13 @@
         <record model="account.account.template" id="13129">
             <field name="name">Other overhead allocations</field>
             <field name="code">13129</field>
+            <field name="type" ref="production_overhead"/>
             <field name="parent" ref="1312"/>
         </record>
         <record model="account.account.template" id="132">
             <field name="name">Intermediate goods</field>
             <field name="code">132</field>
+            <field name="type" ref="intermediate_and_finished_goods"/>
             <field name="parent" ref="13"/>
         </record>
         <record model="account.account.template" id="133">
@@ -2473,6 +2502,7 @@
         <record model="account.account.template" id="138">
             <field name="name">Unallocated production overhead</field>
             <field name="code">138</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13"/>
         </record>
         <record model="account.account.template" id="1380">
@@ -2491,6 +2521,7 @@
         <record model="account.account.template" id="13810">
             <field name="name">Salaries and wages—production overhead</field>
             <field name="code">13810</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="1381"/>
         </record>
         <record model="account.account.template" id="138100">
@@ -2502,6 +2533,7 @@
         <record model="account.account.template" id="138101">
             <field name="name">Indirect production wages</field>
             <field name="code">138101</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13810"/>
         </record>
         <record model="account.account.template" id="138102">
@@ -2513,16 +2545,19 @@
         <record model="account.account.template" id="138103">
             <field name="name">Incentive pay—production overhead</field>
             <field name="code">138103</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13810"/>
         </record>
         <record model="account.account.template" id="138104">
             <field name="name">Severance pay—production overhead</field>
             <field name="code">138104</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13810"/>
         </record>
         <record model="account.account.template" id="13811">
             <field name="name">Required payroll-related expenses—production overhead</field>
             <field name="code">13811</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="1381"/>
         </record>
         <record model="account.account.template" id="138110">
@@ -2546,71 +2581,85 @@
         <record model="account.account.template" id="138113">
             <field name="name">Unemployment insurance—production overhead</field>
             <field name="code">138113</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13811"/>
         </record>
         <record model="account.account.template" id="13812">
             <field name="name">Fringe benefits—production overhead</field>
             <field name="code">13812</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="1381"/>
         </record>
         <record model="account.account.template" id="138120">
             <field name="name">Paid leave—production overhead</field>
             <field name="code">138120</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13812"/>
         </record>
         <record model="account.account.template" id="1381200">
             <field name="name">Vacation pay—production overhead</field>
             <field name="code">1381200</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="138120"/>
         </record>
         <record model="account.account.template" id="1381201">
             <field name="name">Holiday pay—production overhead</field>
             <field name="code">1381201</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="138120"/>
         </record>
         <record model="account.account.template" id="1381202">
             <field name="name">Sick pay—production overhead</field>
             <field name="code">1381202</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="138120"/>
         </record>
         <record model="account.account.template" id="1381203">
             <field name="name">Other paid leave—production overhead</field>
             <field name="code">1381203</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="138120"/>
         </record>
         <record model="account.account.template" id="138121">
             <field name="name">Group health insurance—production overhead</field>
             <field name="code">138121</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13812"/>
         </record>
         <record model="account.account.template" id="138122">
             <field name="name">Life insurance—production overhead</field>
             <field name="code">138122</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13812"/>
         </record>
         <record model="account.account.template" id="138123">
             <field name="name">Employer 401k contributions—production overhead</field>
             <field name="code">138123</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13812"/>
         </record>
         <record model="account.account.template" id="138124">
             <field name="name">Employer IRA contributions—production overhead</field>
             <field name="code">138124</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13812"/>
         </record>
         <record model="account.account.template" id="138125">
             <field name="name">Pensions and retirement—production overhead</field>
             <field name="code">138125</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13812"/>
         </record>
         <record model="account.account.template" id="138129">
             <field name="name">Other employer-provided benefits for indirect production employees</field>
             <field name="code">138129</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13812"/>
         </record>
         <record model="account.account.template" id="1381290">
             <field name="name">Education and professional development—production overhead</field>
             <field name="code">1381290</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="138129"/>
         </record>
         <record model="account.account.template" id="13812900">
@@ -2628,6 +2677,7 @@
         <record model="account.account.template" id="1381292">
             <field name="name">Membership dues—production overhead</field>
             <field name="code">1381292</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="138129"/>
         </record>
         <record model="account.account.template" id="13812920">
@@ -2639,6 +2689,7 @@
         <record model="account.account.template" id="1381293">
             <field name="name">Food-related benefits—production overhead</field>
             <field name="code">1381293</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="138129"/>
         </record>
         <record model="account.account.template" id="13812930">
@@ -2662,6 +2713,7 @@
         <record model="account.account.template" id="1381294">
             <field name="name">Employee achievement awards—production overhead</field>
             <field name="code">1381294</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="138129"/>
         </record>
         <record model="account.account.template" id="13812940">
@@ -2679,6 +2731,7 @@
         <record model="account.account.template" id="13813">
             <field name="name">Employee recruitment—production overhead</field>
             <field name="code">13813</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="1381"/>
         </record>
         <record model="account.account.template" id="13814">
@@ -2697,6 +2750,7 @@
         <record model="account.account.template" id="13820">
             <field name="name">Rent, parking, or other occupancy—production facilities</field>
             <field name="code">13820</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="1382"/>
         </record>
         <record model="account.account.template" id="138200">
@@ -2708,6 +2762,7 @@
         <record model="account.account.template" id="138209">
             <field name="name">Other occupancy costs—production facilities</field>
             <field name="code">138209</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13820"/>
         </record>
         <record model="account.account.template" id="1382090">
@@ -2719,41 +2774,49 @@
         <record model="account.account.template" id="13821">
             <field name="name">Utilities—production facilities</field>
             <field name="code">13821</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="1382"/>
         </record>
         <record model="account.account.template" id="138210">
             <field name="name">Electricity—production facilities</field>
             <field name="code">138210</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13821"/>
         </record>
         <record model="account.account.template" id="138211">
             <field name="name">Gas—production facilities</field>
             <field name="code">138211</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13821"/>
         </record>
         <record model="account.account.template" id="138212">
             <field name="name">Water—production facilities</field>
             <field name="code">138212</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13821"/>
         </record>
         <record model="account.account.template" id="138213">
             <field name="name">Garbage collection—production facilities</field>
             <field name="code">138213</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13821"/>
         </record>
         <record model="account.account.template" id="138217">
             <field name="name">Other utilities—production facilities</field>
             <field name="code">138217</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13821"/>
         </record>
         <record model="account.account.template" id="13822">
             <field name="name">Telephone and communications services—production facilities</field>
             <field name="code">13822</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="1382"/>
         </record>
         <record model="account.account.template" id="138220">
             <field name="name">Telephone—production facilities</field>
             <field name="code">138220</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13822"/>
         </record>
         <record model="account.account.template" id="1382200">
@@ -2789,11 +2852,13 @@
         <record model="account.account.template" id="138221">
             <field name="name">Fax—production facilities</field>
             <field name="code">138221</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13822"/>
         </record>
         <record model="account.account.template" id="138222">
             <field name="name">Radio—production overhead</field>
             <field name="code">138222</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13822"/>
         </record>
         <record model="account.account.template" id="1382220">
@@ -2817,11 +2882,13 @@
         <record model="account.account.template" id="138225">
             <field name="name">Digital networks—production facilities</field>
             <field name="code">138225</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13822"/>
         </record>
         <record model="account.account.template" id="1382250">
             <field name="name">Internet—production facilities</field>
             <field name="code">1382250</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="138225"/>
         </record>
         <record model="account.account.template" id="13822500">
@@ -2833,31 +2900,37 @@
         <record model="account.account.template" id="1382251">
             <field name="name">Local area network (LAN)—production facilities</field>
             <field name="code">1382251</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="138225"/>
         </record>
         <record model="account.account.template" id="1382252">
             <field name="name">Wide area network (WAN)—intra production facilities</field>
             <field name="code">1382252</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="138225"/>
         </record>
         <record model="account.account.template" id="13823">
             <field name="name">Data processing, hosting, and related services—production overhead</field>
             <field name="code">13823</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="1382"/>
         </record>
         <record model="account.account.template" id="138230">
             <field name="name">Data processing—production overhead</field>
             <field name="code">138230</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13823"/>
         </record>
         <record model="account.account.template" id="1382300">
             <field name="name">Data processing supplies—production overhead</field>
             <field name="code">1382300</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="138230"/>
         </record>
         <record model="account.account.template" id="1382301">
             <field name="name">Data processing equipment—production overhead</field>
             <field name="code">1382301</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="138230"/>
         </record>
         <record model="account.account.template" id="13823010">
@@ -2881,6 +2954,7 @@
         <record model="account.account.template" id="138231">
             <field name="name">Third-party data processing—production overhead</field>
             <field name="code">138231</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13823"/>
         </record>
         <record model="account.account.template" id="1382310">
@@ -2898,11 +2972,13 @@
         <record model="account.account.template" id="138233">
             <field name="name">External hosting services—production overhead</field>
             <field name="code">138233</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13823"/>
         </record>
         <record model="account.account.template" id="1382330">
             <field name="name">Domain name services</field>
             <field name="code">1382330</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="138233"/>
         </record>
         <record model="account.account.template" id="13823300">
@@ -2926,6 +3002,7 @@
         <record model="account.account.template" id="1382331">
             <field name="name">Electronic mail services—production overhead</field>
             <field name="code">1382331</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="138233"/>
         </record>
         <record model="account.account.template" id="13823310">
@@ -2943,6 +3020,7 @@
         <record model="account.account.template" id="1382338">
             <field name="name">Infrastructure as a service (IaaS)—production overhead</field>
             <field name="code">1382338</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="138233"/>
         </record>
         <record model="account.account.template" id="13823380">
@@ -2960,26 +3038,31 @@
         <record model="account.account.template" id="1382339">
             <field name="name">Other external hosting services—production overhead</field>
             <field name="code">1382339</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="138233"/>
         </record>
         <record model="account.account.template" id="138239">
             <field name="name">Other data processing, hosting, and related services—production overhead</field>
             <field name="code">138239</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13823"/>
         </record>
         <record model="account.account.template" id="13826">
             <field name="name">Repairs and maintenance—production facilities</field>
             <field name="code">13826</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="1382"/>
         </record>
         <record model="account.account.template" id="13827">
             <field name="name">Production equipment rental</field>
             <field name="code">13827</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="1382"/>
         </record>
         <record model="account.account.template" id="138270">
             <field name="name">Production machinery and equipment</field>
             <field name="code">138270</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13827"/>
         </record>
         <record model="account.account.template" id="1382700">
@@ -2997,6 +3080,7 @@
         <record model="account.account.template" id="138271">
             <field name="name">Transportation equipment—production facilities</field>
             <field name="code">138271</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13827"/>
         </record>
         <record model="account.account.template" id="1382710">
@@ -3014,6 +3098,7 @@
         <record model="account.account.template" id="138272">
             <field name="name">Furniture, fixtures, and office equipment—production facilities</field>
             <field name="code">138272</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13827"/>
         </record>
         <record model="account.account.template" id="1382720">
@@ -3025,16 +3110,19 @@
         <record model="account.account.template" id="138279">
             <field name="name">Other production equipment rental</field>
             <field name="code">138279</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13827"/>
         </record>
         <record model="account.account.template" id="13828">
             <field name="name">Depreciation and amortization—production overhead</field>
             <field name="code">13828</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="1382"/>
         </record>
         <record model="account.account.template" id="138280">
             <field name="name">Land and land improvements—production overhead</field>
             <field name="code">138280</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13828"/>
         </record>
         <record model="account.account.template" id="1382800">
@@ -3052,6 +3140,7 @@
         <record model="account.account.template" id="138281">
             <field name="name">Production buildings and improvements</field>
             <field name="code">138281</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13828"/>
         </record>
         <record model="account.account.template" id="1382810">
@@ -3069,6 +3158,7 @@
         <record model="account.account.template" id="138282">
             <field name="name">Transportation equipment—production facilities</field>
             <field name="code">138282</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13828"/>
         </record>
         <record model="account.account.template" id="1382820">
@@ -3086,6 +3176,7 @@
         <record model="account.account.template" id="138283">
             <field name="name">Furniture, fixtures, and office equipment for production facilities</field>
             <field name="code">138283</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13828"/>
         </record>
         <record model="account.account.template" id="1382830">
@@ -3097,11 +3188,13 @@
         <record model="account.account.template" id="138288">
             <field name="name">Intangibles—production overhead</field>
             <field name="code">138288</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13828"/>
         </record>
         <record model="account.account.template" id="1382880">
             <field name="name">Amortization expense—technology-based intangibles for production</field>
             <field name="code">1382880</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="138288"/>
         </record>
         <record model="account.account.template" id="13828800">
@@ -3125,16 +3218,19 @@
         <record model="account.account.template" id="138289">
             <field name="name">Other depreciation and amortization expenses—production facilities</field>
             <field name="code">138289</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13828"/>
         </record>
         <record model="account.account.template" id="13829">
             <field name="name">Other production facilities and equipment expenses</field>
             <field name="code">13829</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="1382"/>
         </record>
         <record model="account.account.template" id="138290">
             <field name="name">Property tax expense—production facilities</field>
             <field name="code">138290</field>
+            <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13829"/>
         </record>
         <record model="account.account.template" id="1382900">
@@ -3172,11 +3268,13 @@
         <record model="account.account.template" id="139">
             <field name="name">Other inventory items</field>
             <field name="code">139</field>
+            <field name="type" ref="inventory_purchases"/>
             <field name="parent" ref="13"/>
         </record>
         <record model="account.account.template" id="1390">
             <field name="name">Inventory purchases in transit</field>
             <field name="code">1390</field>
+            <field name="type" ref="inventory_purchases"/>
             <field name="parent" ref="139"/>
         </record>
         <record model="account.account.template" id="13900">
@@ -5228,6 +5326,7 @@
         <record model="account.account.template" id="500120">
             <field name="name">Paid leave—direct labor</field>
             <field name="code">500120</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="50012"/>
         </record>
         <record model="account.account.template" id="5001200">
@@ -5251,6 +5350,7 @@
         <record model="account.account.template" id="5001203">
             <field name="name">Other paid leave—direct labor</field>
             <field name="code">5001203</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="500120"/>
         </record>
         <record model="account.account.template" id="500121">
@@ -5280,11 +5380,13 @@
         <record model="account.account.template" id="500125">
             <field name="name">Pensions and retirement—direct labor</field>
             <field name="code">500125</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="50012"/>
         </record>
         <record model="account.account.template" id="500129">
             <field name="name">Other employer-provided benefits—direct labor</field>
             <field name="code">500129</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="50012"/>
         </record>
         <record model="account.account.template" id="5001290">
@@ -5308,6 +5410,7 @@
         <record model="account.account.template" id="5001293">
             <field name="name">Food-related benefits—direct labor</field>
             <field name="code">5001293</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="500129"/>
         </record>
         <record model="account.account.template" id="50012930">
@@ -5331,6 +5434,7 @@
         <record model="account.account.template" id="5001294">
             <field name="name">Employee achievement awards—direct labor</field>
             <field name="code">5001294</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="500129"/>
         </record>
         <record model="account.account.template" id="50012940">
@@ -5354,6 +5458,7 @@
         <record model="account.account.template" id="5002">
             <field name="name">Variable overhead</field>
             <field name="code">5002</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="500"/>
         </record>
         <record model="account.account.template" id="50020">
@@ -5365,6 +5470,7 @@
         <record model="account.account.template" id="50021">
             <field name="name">Indirect labor costs</field>
             <field name="code">50021</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="5002"/>
         </record>
         <record model="account.account.template" id="500210">
@@ -5441,6 +5547,7 @@
         <record model="account.account.template" id="50039">
             <field name="name">Other production facilities and equipment costs</field>
             <field name="code">50039</field>
+            <field name="type" ref="cost_of_products_and_services_fixed"/>
             <field name="parent" ref="5003"/>
         </record>
         <record model="account.account.template" id="5004">
@@ -7516,29 +7623,31 @@
         <record model="account.account.template" id="750">
             <field name="name">Benefits due to loss carryback</field>
             <field name="code">750</field>
+            <field name="type" ref="benefit_due_to_loss_carryforward"/>
             <field name="parent" ref="75"/>
         </record>
         <record model="account.account.template" id="7500">
             <field name="name">Benefit due to loss carryback (federal income tax expense)</field>
             <field name="code">7500</field>
-            <field name="type" ref="benefit_due_to_loss_carryback"/>
+            <field name="type" ref="benefit_due_to_loss_carryforward"/>
             <field name="parent" ref="750"/>
         </record>
         <record model="account.account.template" id="7501">
             <field name="name">Benefit due to loss carryback (state and local income tax expense)</field>
             <field name="code">7501</field>
-            <field name="type" ref="benefit_due_to_loss_carryback"/>
+            <field name="type" ref="benefit_due_to_loss_carryforward"/>
             <field name="parent" ref="750"/>
         </record>
         <record model="account.account.template" id="7502">
             <field name="name">Benefit due to loss carryback (foreign income tax expense)</field>
             <field name="code">7502</field>
-            <field name="type" ref="benefit_due_to_loss_carryback"/>
+            <field name="type" ref="benefit_due_to_loss_carryforward"/>
             <field name="parent" ref="750"/>
         </record>
         <record model="account.account.template" id="751">
             <field name="name">Benefits due to loss carryforward</field>
             <field name="code">751</field>
+            <field name="type" ref="benefit_due_to_loss_carryforward"/>
             <field name="parent" ref="75"/>
         </record>
         <record model="account.account.template" id="7510">
@@ -7562,6 +7671,7 @@
         <record model="account.account.template" id="752">
             <field name="name">Income tax penalties expense</field>
             <field name="code">752</field>
+            <field name="type" ref="other_income_tax_expenses"/>
             <field name="parent" ref="75"/>
         </record>
         <record model="account.account.template" id="7520">
@@ -7585,6 +7695,7 @@
         <record model="account.account.template" id="753">
             <field name="name">Interest on unpaid income tax expense</field>
             <field name="code">753</field>
+            <field name="type" ref="other_income_tax_expenses"/>
             <field name="parent" ref="75"/>
         </record>
         <record model="account.account.template" id="7530">
@@ -7608,76 +7719,91 @@
         <record model="account.account.template" id="8">
             <field name="name">Below-the-line items</field>
             <field name="code">8</field>
+            <field name="type" ref="other_income_tax_expenses"/>
             <field name="parent" ref="root"/>
         </record>
         <record model="account.account.template" id="80">
             <field name="name">Discontinued operations</field>
             <field name="code">80</field>
+            <field name="type" ref="other_income_tax_expenses"/>
             <field name="parent" ref="8"/>
         </record>
         <record model="account.account.template" id="81">
             <field name="name">Extraordinary items</field>
             <field name="code">81</field>
+            <field name="type" ref="other_income_tax_expenses"/>
             <field name="parent" ref="8"/>
         </record>
         <record model="account.account.template" id="9">
             <field name="name">Other comprehensive income</field>
             <field name="code">9</field>
+            <field name="type" ref="other_comprehensive_income"/>
             <field name="parent" ref="root"/>
         </record>
         <record model="account.account.template" id="90">
             <field name="name">Net unrealized gain on available-for-sale assets</field>
             <field name="code">90</field>
+            <field name="type" ref="other_comprehensive_income"/>
             <field name="parent" ref="9"/>
         </record>
         <record model="account.account.template" id="91">
             <field name="name">Gain on cash flow hedges</field>
             <field name="code">91</field>
+            <field name="type" ref="other_comprehensive_income"/>
             <field name="parent" ref="9"/>
         </record>
         <record model="account.account.template" id="92">
             <field name="name">Exchange differences on translation of foreign operations</field>
             <field name="code">92</field>
+            <field name="type" ref="other_comprehensive_income"/>
             <field name="parent" ref="9"/>
         </record>
         <record model="account.account.template" id="93">
             <field name="name">Minimum pension liability adjustments</field>
             <field name="code">93</field>
+            <field name="type" ref="other_comprehensive_income"/>
             <field name="parent" ref="9"/>
         </record>
         <record model="account.account.template" id="94">
             <field name="name">Asset revaluations</field>
             <field name="code">94</field>
+            <field name="type" ref="other_comprehensive_income"/>
             <field name="parent" ref="9"/>
         </record>
         <record model="account.account.template" id="940">
             <field name="name">Revaluations of tangible assets</field>
             <field name="code">940</field>
+            <field name="type" ref="other_comprehensive_income"/>
             <field name="parent" ref="94"/>
         </record>
         <record model="account.account.template" id="941">
             <field name="name">Revaluations of intangible assets</field>
             <field name="code">941</field>
+            <field name="type" ref="other_comprehensive_income"/>
             <field name="parent" ref="94"/>
         </record>
         <record model="account.account.template" id="942">
             <field name="name">Revaluations of financial assets</field>
             <field name="code">942</field>
+            <field name="type" ref="other_comprehensive_income"/>
             <field name="parent" ref="94"/>
         </record>
         <record model="account.account.template" id="943">
             <field name="name">Revaluations of inventories</field>
             <field name="code">943</field>
+            <field name="type" ref="other_comprehensive_income"/>
             <field name="parent" ref="94"/>
         </record>
         <record model="account.account.template" id="95">
             <field name="name">Reclassification adjustments</field>
             <field name="code">95</field>
+            <field name="type" ref="other_comprehensive_income"/>
             <field name="parent" ref="9"/>
         </record>
         <record model="account.account.template" id="99">
             <field name="name">Income tax relating to components of other comprehensive income</field>
             <field name="code">99</field>
+            <field name="type" ref="other_comprehensive_income"/>
             <field name="parent" ref="9"/>
         </record>
 
